@@ -1,5 +1,6 @@
 import React from "react";
-import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
+import { Navbar, Nav, Container, NavDropdown} from 'react-bootstrap';
+import  CartWidget from './cartWidget'
 class NavBarComponent extends React.Component {
     render() {
       return <Navbar bg="light" expand="lg">
@@ -17,6 +18,7 @@ class NavBarComponent extends React.Component {
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
+        <CartWidget/>
       </Container>
     </Navbar>
     }
