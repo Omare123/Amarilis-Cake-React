@@ -16,7 +16,7 @@ export default function ItemCount({inicial, stock}) {
     return (<div className="counter">
         <button onClick={subtractToCart}>-</button>
         <div className="number">
-            <p>{number}</p>
+            <span>{number}</span>
         </div>
         <button onClick={addToCart}>+</button>
     </div>)
