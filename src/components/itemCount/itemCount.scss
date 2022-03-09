@@ -1,0 +1,11 @@
+.counter{
+    display: flex;
+    flex-direction: row;
+    .number{
+        width: 5vw;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
