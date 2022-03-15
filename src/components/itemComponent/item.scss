@@ -1,0 +1,20 @@
+.item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    width: 80vw;
+    height: 20vh;
+    background-color: antiquewhite;
+    margin-top: 10px;
+    &__description{
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+    }
+}
+.image{
+    width: 150px;
+    height: 150px;
+    border-radius: 4px;
+}
