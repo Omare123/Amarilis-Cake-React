@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import ItemList from "../itemListComponent/itemList";
 import "./itemListContainer.scss"
 
-export default function ItemListContainer() {
+export default function ItemListContainer({setItemDetail}) {
   const [products, setProducts] = useState([]);
   const mockProducts = [
     {
@@ -35,14 +35,14 @@ export default function ItemListContainer() {
     },
   ]
 
-  const promesa = new Promise((res, rej) => {
+  const promesa = new Promise((res) => {
     setTimeout(()=>{
       res(setProducts(mockProducts))
-    }, 3000)
+    }, 1000)
   })
 
   return (<div className="itemList">
-    {products.length ? <ItemList items={products} /> : "Loading..."}
+    {products.length ? <ItemList items={products} setItemDetail={setItemDetail} /> : "Loading..."}
   </div>)
 
 }

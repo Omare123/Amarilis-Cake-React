@@ -1,6 +1,7 @@
-.itemList{
+.detailsContainer{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
+    height: 100vh;
 }

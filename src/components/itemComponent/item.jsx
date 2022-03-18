@@ -2,8 +2,15 @@ import React from "react";
 import ItemCount from "../itemCount/itemCount";
 import "./item.scss"
 
-export default function Item({ name, price, imageUrl }) {
-  return (<div className="item">
+export default function Item({ name, price, imageUrl, setItemDetail }) {
+  function selectItem(){
+    setItemDetail({
+      name: name,
+      price: price,
+      imageUrl: imageUrl
+    })
+  }
+  return (<div onClick={selectItem} className="item">
     <div className="item__image">
       <img className="image" src={imageUrl} />
     </div>
