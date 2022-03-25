@@ -1,20 +1,32 @@
-.item{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: start;
-    width: 80vw;
-    height: 20vh;
-    background-color: antiquewhite;
-    margin-top: 10px;
-    &__description{
-        display: flex;
-        flex-direction: column;
-        width: 100vw;
-    }
-}
-.image{
-    width: 150px;
-    height: 150px;
+.card{
+    transition: transform .4s;
+    width: 20vw;
+    height: 20vw;
     border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    &__img{
+        width: 100%;
+        height: 80%;
+        border-radius: 4px 4px 0px 0px;
+        background-size:cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    &__span{
+        text-align: center;
+        margin: 0;
+        width: 100%;
+    }
+    &:hover{
+        transform: translateY(-10px);
+    }
+    
+    .image{
+        width: 100%;
+        height: 100%;
+        border-radius: 4px;
+    }
 }
