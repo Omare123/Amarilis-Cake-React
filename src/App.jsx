@@ -1,3 +1,4 @@
+import './styles/variables.scss'
 import './App.scss';
 import { useState } from "react";
 import {

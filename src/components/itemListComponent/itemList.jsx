@@ -5,7 +5,7 @@ import "./itemList.scss"
 export default function ItemList({items, setItemDetail}) {
   
       return (<div className="mapList">{items.map(item =>
-        <Item setItemDetail={setItemDetail} id={item.id} name={item.name} price={item.price} imageUrl={item.url}/>
+        <Item setItemDetail={setItemDetail} id={item.id} item={item}/>
       )}</div>)
         
 }

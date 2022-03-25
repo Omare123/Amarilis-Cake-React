@@ -1,24 +1,14 @@
 import React from "react";
-import { useState } from "react";
 import "./itemCount.scss"
 
-export default function ItemCount({inicial, stock}) {
-    const [number, setNumber] = useState(inicial);
-
-    function addToCart() {
-        if (number < stock)
-            setNumber(number + 1)
-    }
-    function subtractToCart() {
-        if (number > 0)
-            setNumber(number - 1)
-    }
+export default function ItemCount({stock, cantidad, subtractToCart, addToCart}) {
+    
     return (<div className="counter">
-        <button onClick={subtractToCart}>-</button>
+        {cantidad > 1 && <button onClick={subtractToCart}>-</button>}
         <div className="number">
-            <span>{number}</span>
+            <span>{cantidad}</span>
         </div>
-        <button onClick={addToCart}>+</button>
+        {cantidad < stock && <button onClick={addToCart}>+</button>}
     </div>)
 
 }
