@@ -3,7 +3,7 @@ import { useState } from "react";
 import ItemCount from "../itemCount/itemCount";
 import "./itemDetail.scss"
 
-export default function ItemDetail({ item }) {
+export default function ItemDetail({ item, onAdd }) {
   const [cantidad, setCantidad] = useState(1);
 
     function addToCart() {
@@ -20,7 +20,7 @@ export default function ItemDetail({ item }) {
       <span  className="itemDetails__description__name" >{item.name}</span>
       <span  className="itemDetails__description__price" >{'$'+item.price}</span>
     </div>
-    <ItemCount cantidad={cantidad} stock={item.stock} addToCart={addToCart} subtractToCart={subtractToCart} />
+    <ItemCount cantidad={cantidad} item={item} addToCart={addToCart} subtractToCart={subtractToCart} onAdd={onAdd} />
   </div>)
 
 }
