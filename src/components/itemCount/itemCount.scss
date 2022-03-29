@@ -1,11 +1,24 @@
-.counter{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 100%;
-    .number{
+.itemButtons{
         display: flex;
-        width: 5vw;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 10px;
+    .counter{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 100%;
+        .number{
+            display: flex;
+            width: 5vw;
+            justify-content: center;
+        }
+    }
+    .add{
+        text-align: center;
+        margin-top: 5px;
+        background-color: white;
+        border-radius: 4px;
+        cursor: pointer;
     }
 }
