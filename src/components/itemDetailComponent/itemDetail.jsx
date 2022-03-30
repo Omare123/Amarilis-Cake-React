@@ -1,9 +1,8 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import ItemCount from "../itemCount/itemCount";
 import "./itemDetail.scss"
 
-export default function ItemDetail({ item, onAdd }) {
+export default function ItemDetail({ item }) {
   const [cantidad, setCantidad] = useState(1);
 
     function addToCart() {
@@ -20,7 +19,7 @@ export default function ItemDetail({ item, onAdd }) {
       <span  className="itemDetails__description__name" >{item.name}</span>
       <span  className="itemDetails__description__price" >{'$'+item.price}</span>
     </div>
-    <ItemCount cantidad={cantidad} item={item} addToCart={addToCart} subtractToCart={subtractToCart} onAdd={onAdd} />
+    <ItemCount cantidad={cantidad} item={item} addToCart={addToCart} subtractToCart={subtractToCart} />
   </div>)
 
 }

@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./itemCount.scss"
+import { ProductsContext } from '../cartContext/ProductsContext'
 
-export default function ItemCount({ item, cantidad, subtractToCart, addToCart, onAdd }) {
-
+export default function ItemCount({ item, cantidad, subtractToCart, addToCart }) {
+    const context = useContext(ProductsContext)
+    
     function sendToCart() {
         let itemToSend = {
             id: item.id,
@@ -11,7 +13,7 @@ export default function ItemCount({ item, cantidad, subtractToCart, addToCart, o
             image: item.url,
             quantity: cantidad,
         }
-        onAdd(itemToSend)
+        context.onAdd(itemToSend)
     }
 
     return (<div className="itemButtons">
