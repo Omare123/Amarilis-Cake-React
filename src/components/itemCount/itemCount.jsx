@@ -1,28 +1,28 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
+import { Link } from 'react-router-dom'
 import "./itemCount.scss"
 import { ProductsContext } from '../cartContext/ProductsContext'
 
 export default function ItemCount({ item, cantidad, subtractToCart, addToCart }) {
     const context = useContext(ProductsContext)
+    const [added, setAdded] = useState(false)
     
     function sendToCart() {
-        let itemToSend = {
-            id: item.id,
-            name: item.name,
-            price: item.price,
-            image: item.url,
-            quantity: cantidad,
-        }
+        let itemToSend = {... item}
+        itemToSend["quantity"] =  cantidad
+        setAdded(true)
         context.onAdd(itemToSend)
     }
 
-    return (<div className="itemButtons">
+    return (added ? 
+        <Link to="/cart"><div className="add" onClick={sendToCart}>Terminar compra</div></Link> :
+     <div className="itemButtons">
         <div className="counter">
-            {cantidad > 1 && <button onClick={subtractToCart}>-</button>}
+            <button disabled={cantidad <= 1} onClick={subtractToCart}>-</button>
             <div className="number">
                 <span>{cantidad}</span>
             </div>
-            {cantidad < item.stock && <button onClick={addToCart}>+</button>}
+            <button disabled={cantidad >= item.stock} onClick={addToCart}>+</button>
         </div>
         <div className="add" onClick={sendToCart}>Agregar al carrito</div>
     </div>)
