@@ -40,6 +40,10 @@ export default function CartContext({ children }) {
 
   }
 
+  function clearCart(){
+    setCart([])
+  }
+
   const findItem = (itemId) => cart.findIndex(product => product.id == itemId)
   useEffect(() => {
     let elementsCount = 0
@@ -53,7 +57,7 @@ export default function CartContext({ children }) {
     setPrice(totalPrice)
   }, [cart]);
 
-  return (<ProductsContext.Provider value={{ cart, onAdd, count, price, onMinus, onPlus }}>
+  return (<ProductsContext.Provider value={{ cart, onAdd, count, price, onMinus, onPlus, clearCart }}>
     {children}
   </ProductsContext.Provider>)
 

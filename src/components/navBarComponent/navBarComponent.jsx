@@ -10,7 +10,7 @@ export default function NavBarComponent(){
         <Link to="/"><a>Amarilis Cake (logo)</a></Link>
         <Link to="/"><a>Inicio</a></Link>
         <a>Productos</a>
-        <a>Notoros</a>
+        <a>Nosotros</a>
         <Link to="/cart"><CartWidget number={cart.count}/></Link>
       </nav>)
 }
