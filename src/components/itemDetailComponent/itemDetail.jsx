@@ -19,7 +19,7 @@ export default function ItemDetail({ item }) {
       <span  className="itemDetails__description__name" >{item.name}</span>
       <span  className="itemDetails__description__price" >{'$'+item.price}</span>
     </div>
-    <ItemCount cantidad={cantidad} item={item} addToCart={addToCart} subtractToCart={subtractToCart} />
+    { item.stock > 0 ? <ItemCount cantidad={cantidad} item={item} addToCart={addToCart} subtractToCart={subtractToCart} /> : <p>No hay stock</p>}
   </div>)
 
 }

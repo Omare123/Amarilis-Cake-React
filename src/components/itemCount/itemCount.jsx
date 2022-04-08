@@ -15,7 +15,7 @@ export default function ItemCount({ item, cantidad, subtractToCart, addToCart })
     }
 
     return (added ? 
-        <Link to="/cart"><div className="add" onClick={sendToCart}>Terminar compra</div></Link> :
+        <Link to="/cart"><div className="add">Terminar compra</div></Link> :
      <div className="itemButtons">
         <div className="counter">
             <button disabled={cantidad <= 1} onClick={subtractToCart}>-</button>
