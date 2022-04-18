@@ -1,0 +1,44 @@
+@import "../../styles/variables.scss";
+
+.direction__row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 30vw;
+        height: 25vh;
+        margin-top: 5vh;
+        border-radius: $border-radius;
+        background-color: $secondary-color;
+
+        &__information {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 30vw;
+            height: 10vh;
+            color: $black;
+            text-align: center;
+            font-size: 1.5em;
+
+            &__instagram {
+                color: $black;
+            }
+        }
+
+        &__iframe {
+            border: 0px;
+            width: 30vw;
+            min-height: 10vh;
+            max-height: 30vh;
+            border-radius: 0 $border-radius $border-radius 0;
+        }
+    }
+}

@@ -13,6 +13,7 @@ import ItemDetailsContainer from './components/itemDetailsContainer/itemDetailsC
 import CartListContainer from './components/cartListContainer/cartListContainer'
 import CartContext from './components/cartContext/cartContext'
 import OrderContainer from './components/orderContainer/orderContainer'
+import LocationContainer from './components/locationContainer/locationContainer'
 
 export default function App() {
   const [itemDetail, setItemDetail] = useState();
@@ -32,6 +33,9 @@ export default function App() {
             </Route>
             <Route exact path="/cart">
               <Route exact path='/cart' element={<CartListContainer />} />
+            </Route>
+            <Route exact path="/nosotros">
+              <Route exact path='/nosotros' element={<LocationContainer />} />
             </Route>
             <Route path="/order/:id" element={<OrderContainer/>} />
           </Routes>

@@ -7,10 +7,10 @@ import { ProductsContext } from '../cartContext/ProductsContext'
 export default function NavBarComponent(){
   const cart = useContext(ProductsContext)
       return( <nav className="navBar">
-        <Link to="/"><a>Amarilis Cake (logo)</a></Link>
         <Link to="/"><a>Inicio</a></Link>
         <a>Productos</a>
-        <a>Nosotros</a>
+        <Link to="/"><div className="logo"></div></Link>
+        <Link to="/nosotros"><a>Nosotros</a></Link>
         <Link to="/cart"><CartWidget number={cart.count}/></Link>
       </nav>)
 }
