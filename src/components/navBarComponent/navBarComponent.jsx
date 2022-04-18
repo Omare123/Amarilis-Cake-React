@@ -8,7 +8,7 @@ export default function NavBarComponent(){
   const cart = useContext(ProductsContext)
       return( <nav className="navBar">
         <Link to="/"><a>Inicio</a></Link>
-        <a>Productos</a>
+        <Link to="/productos"><a>Productos</a></Link>
         <Link to="/"><div className="logo"></div></Link>
         <Link to="/nosotros"><a>Nosotros</a></Link>
         <Link to="/cart"><CartWidget number={cart.count}/></Link>

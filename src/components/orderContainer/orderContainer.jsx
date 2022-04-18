@@ -2,7 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import './orderContainer.scss'
 
-export default function OrderContainer({ price, buy }) {
+export default function OrderContainer() {
   let { id } = useParams();
 
   return (<div className="order">

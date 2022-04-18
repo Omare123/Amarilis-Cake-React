@@ -4,7 +4,7 @@ import { db } from '../../utils/firebase'
 import ItemList from "../itemListComponent/itemList";
 import "./itemListContainer.scss"
 
-export default function ItemListContainer({ setItemDetail }) {
+export default function ItemListContainer() {
   const [alfajores, setAlfajores] = useState([]);
   const [tortas, setTortas] = useState([]);
   const [cajas, setCajas] = useState([]);
