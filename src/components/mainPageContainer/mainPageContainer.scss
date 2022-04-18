@@ -1,0 +1,161 @@
+@import "../../styles/variables.scss";
+
+.intro{
+    width: 80vw;
+    margin-bottom: 10vh;
+    min-height: 40vh;
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    &__section{
+        width: 100%;
+        display: flex;
+        flex-direction: column; 
+        justify-content: center;
+        align-items: center;
+        color: $black;
+        &__icon{
+            width: 5vw;
+            height: 5vh;
+        }
+        &__text{
+            font-size: 1.5em;
+            text-align: center;
+        }
+    }
+}
+
+.banner{
+display: flex; 
+flex-direction: row; 
+justify-content:space-evenly; 
+align-items: center;
+height: 60vh;
+max-width: 99vw;
+&__icon{
+    transition: transform .2s;
+    width: 40vw;
+    height: 40vh;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+:hover{
+    transform: scale(1.1);
+}
+#iconOne{
+    background-image: url("https://vigorous-pike-17d388.netlify.app/images/icono-1.jpg") ;
+}
+#iconTwo{
+    background-image: url("https://vigorous-pike-17d388.netlify.app/images/icono-2.jpg") ;
+}
+#iconThree{
+    background-image: url("https://vigorous-pike-17d388.netlify.app/images/icono-3.jpg") ;
+}
+#iconFour{
+    background-image: url("https://vigorous-pike-17d388.netlify.app/images/icono-4.jpg") ;
+}
+}
+
+.vegan{
+display: flex; 
+flex-direction: column; 
+justify-content:space-around; 
+align-items: center;
+min-height: 70vh;
+&__title{
+    display: flex; 
+    flex-direction: row; 
+    justify-content: center; 
+    align-items: center;
+    height: 10vh;
+    width: 100vw;
+    background-color: $secondary-color;
+    color: $black;
+    margin-bottom: 5vh;
+    font-size: 4vh;
+}
+&__supercard{
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between; 
+    align-items: center;
+    border-radius: $border-radius;
+    background-color: $black;
+    width: 80vw;
+    height: 50vh;
+    margin-bottom: 5vh;
+    &__img{
+        min-height: 50vh;
+        width: 50vw;
+        background-size:cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: $border-radius;
+        background-image: url("https://vigorous-pike-17d388.netlify.app/images/vegan-4.jpg");
+    }
+    &__information{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 0 10vh;
+        font-size: 1.1em;
+        height: 100%;
+        align-content: center;
+        color: $primary-color;
+        &__title{
+            font-size: 2em;
+        }
+        
+    }
+}
+&__divition{
+
+    display: flex; 
+    flex-direction: row; 
+    justify-content:space-evenly; 
+    align-items:flex-start;
+    min-height: 50vh;
+    width: 90vw;
+    &__card{
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
+        border-radius: $border-radius;
+        background-color: $blue;
+        width: 20vw;
+        min-height: 45vh;
+        #veganOne{
+            background-image: url("https://vigorous-pike-17d388.netlify.app/images/vegan-1.jpg") ;
+        }
+        #veganTwo{
+            background-image: url("https://vigorous-pike-17d388.netlify.app/images/vegan-2.jpg") ;
+        }
+        #veganThree{
+            background-image: url("https://vigorous-pike-17d388.netlify.app/images/vegan-3.jpg") ;
+        }
+        &__img{
+            height: 40vh;
+            width: 20vw;
+            border-radius: $border-radius $border-radius 0 0;
+            background-size:cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        
+        &__information{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 10vh;
+            max-width: 90%;
+            text-align: center;
+            font-size: 1.1em;
+            color: $secondary-color;
+        }
+        
+    }
+}
+
+
+}

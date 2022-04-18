@@ -13,10 +13,12 @@ import ItemDetailsContainer from './components/itemDetailsContainer/itemDetailsC
 import CartListContainer from './components/cartListContainer/cartListContainer'
 import CartContext from './components/cartContext/cartContext'
 import OrderContainer from './components/orderContainer/orderContainer'
+import LocationContainer from './components/locationContainer/locationContainer'
+import MainPageContainer from './components/mainPageContainer/mainPageContainer'
 
 export default function App() {
   const [itemDetail, setItemDetail] = useState();
-  
+
   return (<div className='App'>
     <CartContext>
       <Router>
@@ -26,14 +28,12 @@ export default function App() {
           {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
           <Routes>
-            <Route path="/item/:id" element={<ItemDetailsContainer item={itemDetail} />} />
-            <Route exact path="/">
-              <Route exact path='/' element={<ItemListContainer setItemDetail={setItemDetail} />} />
-            </Route>
-            <Route exact path="/cart">
-              <Route exact path='/cart' element={<CartListContainer />} />
-            </Route>
-            <Route path="/order/:id" element={<OrderContainer/>} />
+            <Route path="/item/:id" element={<ItemDetailsContainer />} />
+            <Route path="/" element={<MainPageContainer />} />
+            <Route exact path='/productos' element={<ItemListContainer />} />
+            <Route exact path='/cart' element={<CartListContainer />} />
+            <Route exact path='/nosotros' element={<LocationContainer />} />
+            <Route path="/order/:id" element={<OrderContainer />} />
           </Routes>
         </div>
       </Router>
